@@ -1,0 +1,85 @@
+$projectPicProp: 427/450
+.project
+  background: linear-gradient(90deg, $color3, $color3 60%, $color2 60%, $color2 100%)
+  +media(768)
+    background: $color3
+  .project--inner
+    padding: 100px 10px
+    +block($blockWidth2 )
+    display: flex
+    flex-direction: column-reverse
+    +media(768)
+      padding-top: 30px
+      padding-bottom: 0
+    .tab--buttons
+      display: flex
+      position: relative
+      z-index: 10
+      top: -40px
+      +media(768)
+        justify-content: center
+      .tab--dot
+        width: 20px
+        height: 20px
+        border: 3px solid #000
+        border-radius: 50%
+        margin: 0 10px
+      .tab--dot-active
+        background: #777
+      .tab--button
+        width: 40px
+        height: 40px
+        background: $color2 url("images/arrow.svg") center no-repeat
+      .tab--button-right
+        margin-left: 5px
+        transform: rotate(180deg)
+      .active-button
+        background: $color2 url("images/arrow-active.svg") center no-repeat
+    .project--tab
+      display: none
+      +media(768)
+        flex-direction: column-reverse
+        align-items: center
+      .tab--left
+        width: 100%
+        z-index: 3
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: start
+        padding-bottom: 100px
+        @media screen and (min-width: 769px)
+          width: 52%
+          position: relative
+        .tab--title
+          font-weight: 700
+          font-size: 30px
+          +media(768)
+            margin-top: 25px
+            margin-bottom: 15px
+            width: 100%
+            text-align: center
+        .tab--char
+          font-weight: 300
+          font-size: 16px
+          +media(768)
+            margin-bottom: 15px
+            width: 100%
+            text-align: center
+        .tab--text
+          background: $color2
+          padding: 40px
+          width: calc( 100% - 40px )
+          +media(768)
+            width: calc( 100% - 80px )
+      .tab--right
+        width: 427px
+        height: 450px
+        background: url("images/project.jpg") center no-repeat
+        @each $w, $i in (768: 400, 414: 300)
+          +media($w)
+            width: $i + px
+            height: floor($i * $projectPicProp) + px
+    .active-tab
+      display: flex
+

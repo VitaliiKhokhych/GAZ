@@ -3,12 +3,19 @@ header.header
     .header--item.header--logo
       img(src="images/logo.svg", alt="КриоГаз")
     nav.header--item.header--menu
-      .menu--item Главная
-      .menu--item О компании
-      .menu--item Решения
-      .menu--item Реализованные проекты
-      .menu--item Контакты
+      a(href="http://", target="_blank").menu--item Главная
+      a(href="http://", target="_blank").menu--item О компании
+      a(href="http://", target="_blank").menu--item Решения
+      a(href="http://", target="_blank").menu--item Реализованные проекты
+      a(href="http://", target="_blank").menu--item Контакты
+    .adaptive-menu(data-menu) menu
     .header--item.header--contact
       a.tel(href="tel:+78123837070") +7 (812) 383-70-70
       a.mail(href="mailto:cryogas@cryogas.ru") cryogas@cryogas.ru
        
+.modal(data-modal)
+  a(href="http://", target="_blank").modal--item Главная
+  a(href="http://", target="_blank").modal--item О компании
+  a(href="http://", target="_blank").modal--item Решения
+  a(href="http://", target="_blank").modal--item Реализованные проекты
+  a(href="http://", target="_blank").modal--item Контакты

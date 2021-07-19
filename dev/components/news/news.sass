@@ -1,0 +1,69 @@
+.news
+  background: linear-gradient(90deg, $color2, $color2 60%, $color3 60%, $color3 100%)
+  .news--inner
+    padding: 100px 30px
+    +block($blockWidth2)
+    display: flex
+    flex-direction: column
+    +media(414)
+      padding: 30px 10px
+    .news--top
+      display: flex
+      justify-content: space-between
+      margin-bottom: 40px
+      .top--left
+        display: flex
+        flex-direction: column
+        .top--title
+          font-weight: 700
+          font-size: 30px
+        .top--char
+          font-weight: 300
+          font-size: 16px
+      .top--button
+    .news--articles
+      background: $color2
+      display: flex
+      justify-content: space-between
+      +media(1100)
+        display: grid
+        grid-template-areas: 'article1 article2' 'article3 article3'
+      +media(786) 
+        grid-template-areas: 'article1 article1' 'article2 article2' 'article3 article3'
+      .news--article
+        display: flex
+        flex-direction: column
+        width: 45%
+        box-shadow: 0px 0px 20px rgba(224, 224, 224, 0.25)
+        +media(786) 
+          width: calc( 100% - 10px )
+          align-items: center
+          margin: 0 5px
+        @for $var from 1 through 3
+          &:nth-child(#{$var})
+            grid-area: article + $var
+        .article--item
+          &:nth-child(n+2)
+            margin-bottom: 15px
+        .article--pic
+          width: 255px
+          height: 200px
+          background: url("images/news.jpg") center no-repeat
+        .article--date
+          font-weight: 300
+          font-size: 11px
+          line-height: 13px
+          margin-top: 30px
+        .article--title
+          font-weight: 500
+          font-size: 18px
+          line-height: 25px
+        .article--text
+          font-weight: 300
+          font-size: 11px
+          line-height: 14px
+          +media(786) 
+            max-width: 400px
+        .article--button
+          margin-top: 5px
+          margin-bottom: 30px !important

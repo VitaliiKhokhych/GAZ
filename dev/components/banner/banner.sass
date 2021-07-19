@@ -1,3 +1,4 @@
+$bannerProp: 750/1920
 .banner
   color: $color2
   margin-top: -120px
@@ -6,3 +7,7 @@
     height: 750px
     background: url("images/banner.jpg") center no-repeat
     background-size: 100% 100%
+    @each $i in (1250, 1024, 768, 414)
+      +media($i)
+        max-width: $i + px
+        height: floor($i * $bannerProp) + px

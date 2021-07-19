@@ -1,0 +1,26 @@
+.footer
+  background: #323232
+  padding: 40px 0
+  .footer--inner
+    +block($blockWidth)
+    display: flex
+    align-items: center
+    flex-direction: column
+    color: $color2
+    .footer--top
+      display: flex
+      font-size: 14px
+      margin-bottom: 11px
+      .footer--top-item
+        margin: 0 12px
+    .footer--bottom
+      font-size: 11px
+      text-align: center
+      margin-top: 11px
+      +media(414)
+        display: flex
+        align-items: center
+        flex-direction: column
+      span
+        +media(414)
+          display: block
